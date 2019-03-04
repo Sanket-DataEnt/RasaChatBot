@@ -1,0 +1,78 @@
+action_factory: null
+action_names:
+- utter_greeting
+- utter_request_order
+- utter_request_cc
+- action_menu_type
+- utter_ask
+- action_nveg_type
+- action_cuisine_type
+- utter_confirm_affirm
+- utter_confirm_deny
+- utter_bye
+actions:
+- utter_greeting
+- utter_request_order
+- utter_request_cc
+- actions.ActionDisplayMenu
+- utter_ask
+- actions.ActionNveg
+- actions.ActionSelectCuisine
+- utter_confirm_affirm
+- utter_confirm_deny
+- utter_bye
+config:
+  store_entities_as_slots: true
+entities: []
+intents:
+- greeting
+- request_order
+- request_cc
+- number
+- display_menu
+- food_type
+- food_veg_nveg
+- order
+- confirm_affirm
+- confirm_deny
+- bye
+slots:
+  cuisine:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  food:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  greeting:
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - food order
+    - customer care
+  vegn:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask:
+  - text: "What do you like to eat: \n 1. Vegetarian \n 2. Non-Vegetarian"
+  utter_bye:
+  - text: Bye.
+  - text: Good bye.
+  utter_confirm_affirm:
+  - text: Yeppy!!! your hunger will be satisfied in few minutes.
+  utter_confirm_deny:
+  - text: Do you like to order something else
+  utter_greeting:
+  - buttons:
+    - payload: '/request_order{"greeting": "food order"}'
+      title: food order
+    - payload: '/request_cc{"greeting": "customer care"}'
+      title: customer care
+    text: Hi!!! I am Alfred, your food ordering assistant. Which domain You are interested
+      about?
+  utter_request_cc:
+  - text: Sorry for the inconvenience. Please leave your phone number, our agent will
+      contact you.
+  utter_request_order:
+  - text: Thanks for choosing us. What would you like to eat?
+topics: []
