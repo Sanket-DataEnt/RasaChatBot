@@ -1,0 +1,32 @@
+{
+  "features": [
+    "intent_greeting",
+    "intent_request_order",
+    "intent_request_cc",
+    "intent_number",
+    "intent_display_menu",
+    "intent_food_type",
+    "intent_food_veg_nveg",
+    "intent_order",
+    "intent_confirm_affirm",
+    "intent_confirm_deny",
+    "intent_bye",
+    "slot_cuisine_0",
+    "slot_food_0",
+    "slot_greeting_0",
+    "slot_greeting_1",
+    "slot_vegn_0",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_utter_greeting",
+    "prev_utter_request_order",
+    "prev_utter_request_cc",
+    "prev_action_menu_type",
+    "prev_utter_ask",
+    "prev_action_nveg_type",
+    "prev_action_cuisine_type",
+    "prev_utter_confirm_affirm",
+    "prev_utter_confirm_deny",
+    "prev_utter_bye"
+  ]
+}
